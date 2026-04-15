@@ -14,9 +14,3 @@ class Solution:
                 ans = min (ans, dist)
         return ans
     
-words = input("Enter words:").split()
-target = input("Enter target: ").strip()
-startIndex = int(input("Enter startIndex: "))
-
-sol = Solution()
-print(sol.closetTargetDistance(words, target, startIndex))
