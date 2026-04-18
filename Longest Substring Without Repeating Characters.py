@@ -1,18 +1,14 @@
 class Solution:
-    def lengthOflongestSubstring(self,s: str)-> int:
-        last_seen ={ }
+    def lengthOfLongestSubstring(self, s):
+        last_seen = {}
         left = 0
         max_len = 0
 
         for right, char in enumerate(s):
-            if char in last_seen and last_seen[char] >=left:
-             left = last_seen[char] + 1
-            
+            if char in last_seen and last_seen[char] >= left:
+                left = last_seen[char] + 1
+
             last_seen[char] = right
-            max_len =max(max_len,right -left +1)
+            max_len = max(max_len, right - left + 1)
 
         return max_len
-    
-s = input("Enter String: ")
-result = Solution().lengthOflongestSubstring(s)
-print("Output: ", result)
