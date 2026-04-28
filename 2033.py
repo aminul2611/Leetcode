@@ -21,18 +21,3 @@ class Solution(object):
         
         return operations
     
-if __name__ == "__main__":
-    m, n = map(int, input("Enter rows and cols: ").split())
-    
-    grid = []
-    print("Enter grid row by row:")
-    for _ in range(m):
-        row = list(map(int, input().split()))
-        grid.append(row)
-    
-    x = int(input("Enter x: "))
-    
-    sol = Solution()
-    result = sol.minOperations(grid, x)
-    
-    print("Output:", result)
