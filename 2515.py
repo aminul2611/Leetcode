@@ -13,4 +13,3 @@ class Solution:
                 dist = min(diff, n - diff)
                 ans = min (ans, dist)
         return ans
-    
