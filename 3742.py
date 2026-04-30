@@ -1,5 +1,3 @@
-import ast 
-
 class Solution(object):
     def maxPathScore(Self, grid, k):
         m = len(grid)
@@ -32,18 +30,3 @@ class Solution(object):
             if dp[m-1][n-1][c] > ans:
                  ans = dp[m - 1][n - 1][c]
         return ans
-    
-if __name__ == "__main__" :
-    sol = Solution()
-
-    try:
-        grid_input = input("Enter the grid(e.g. , [[0,1],[2,0]]): ").strip()
-        grid = ast.literal_eval(grid_input)
-
-        k_input = input("Enter the value of k: ").strip()
-        k = int(k_input)
-
-        result = sol.maxPathScore(grid, k)
-        print("Output: ",result)
-    except Exception as e:
-            print(" wrong input", e)
