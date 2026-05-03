@@ -4,8 +4,3 @@ class Solution(object):
             return False
 
         return goal in (s + s)
-s = input("Enter s: ")
-goal = input("Enter goal: ")
-
-sol = Solution()
-print(sol.rotateString(s, goal))
