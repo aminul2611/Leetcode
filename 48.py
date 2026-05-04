@@ -8,3 +8,26 @@ class Solution(object):
 
         for i in range(n):
             matrix[i].reverse()
+
+while True:
+    s = input("Enter the Row: ").strip()
+
+    if s.lower() == "exit":
+        break
+    s = s[1: -1]
+    rows = s.split("],")
+
+    matrix = []
+
+
+    for row in rows:
+        row = row.replace("[", "").replace("]","")
+        if row:
+            nums = list(map(int, row.split(",")))
+            matrix.append(nums)
+
+    sol = Solution()
+    sol.rotate(matrix)
+
+    print("Rotated matrix: ")
+    print(matrix)
