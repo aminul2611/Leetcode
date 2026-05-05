@@ -45,26 +45,3 @@ def to_list(head):
             head = head.next
         return res
 
-import ast
-
-sol = Solution()
-
-while True:
-    try: 
-        s = input("\nEnter the Head number: ")
-
-        if s.lower() == "exit":
-            break
-
-        arr = ast.literal_eval(s)
-        k = int(input("Enter k = "))
-
-        head = build_linked_list(arr)
-        new_head = sol.rotateRight(head, k)
-
-        print("Output: ", to_list(new_head))
-        print("-" *30)
-
-    except Exception as e:
-        print("Error:", e)
-        break   
